@@ -14,7 +14,7 @@
   <body>
     <div x-data="price_plan" x-init="init()">
       <h1>Price Plan Widget</h1>
-      <div x-data="pricePlansFetcher()" x-init="fetchPricePlans" class="pricePlanFetch">
+      <div x-data="pricePlansFetcher()" x-init="fetchPricePlans" class="container">
         <h2>Load Price Plans</h2>
         
         <div x-show="loading">
@@ -54,7 +54,7 @@
       </div>
     </br>
 
-      <div x-data="phoneBillCalculator()" class="phoneBillCalculator">
+      <div x-data="phoneBillCalculator()" class="container">
         <h2>Calculate Phone Bill</h2>
         <input type="text" x-model="pricePlan" placeholder="Enter price plan" />
         <input
@@ -74,7 +74,7 @@
       </div>
     </br>
 
-      <div x-data="pricePlanCreator()" class="pricePlanCreator">
+      <div x-data="pricePlanCreator()" class="container">
         <h2>Create Price Plan</h2>
         <input type="text" x-model="name" placeholder="Enter price plan name" />
         <input
@@ -91,17 +91,13 @@
         />
         <button @click="createPricePlan">Create Price Plan</button>
 
-        <div x-show="message" class="alert alert-success">
-          <span x-text="message"></span>
-        </div>
-
         <div x-show="error" class="alert alert-danger">
           <span x-text="error"></span>
         </div>
       </div>
     </br>
 
-      <div x-data="pricePlanUpdater()" class="pricePlanUpdater">
+      <div x-data="pricePlanUpdater()" class="container">
         <h2>Update Price Plan</h2>
         <input type="text" x-model="name" placeholder="Enter price plan name" />
         <input
@@ -118,17 +114,10 @@
         />
         <button @click="updatePricePlan">Update Price Plan</button>
 
-        <div x-show="message" class="alert alert-success">
-          <span x-text="message"></span>
-        </div>
-
-        <div x-show="error" class="alert alert-danger">
-          <span x-text="error"></span>
-        </div>
       </div>
     </br>
 
-      <div x-data="pricePlanDeleter()" class="pricePlanDeleter">
+      <div x-data="pricePlanDeleter()" class="container">
         <h2>Delete Price Plan</h2>
         <input
           type="number"
@@ -137,12 +126,6 @@
         />
         <button @click="deletePricePlan">Delete Price Plan</button>
 
-        <div x-show="message" class="alert alert-success">
-          <span x-text="message"></span>
-        </div>
-
-        <div x-show="error" class="alert alert-danger">
-          <span x-text="error"></span>
         </div>
       </div>
     </div>

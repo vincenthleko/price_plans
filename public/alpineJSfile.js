@@ -34,6 +34,8 @@ document.addEventListener("alpine:init", () => {
               }
               setTimeout(() => {
                 this.result = "";
+                this.pricePlan = "";
+                this.actions = "";
               }, 5000);
             } catch (err) {
               this.error = "An unexpected error occurred.";
@@ -109,6 +111,13 @@ document.addEventListener("alpine:init", () => {
               } else {
                 this.error = 'Failed to create price plan.';
                 alert(this.error);
+                setTimeout(() => {
+                  this.name = "";
+                  this.callCost = "";
+                  this.smsCost = "";
+                  this.message = "";
+                  this.error = "";
+                }, 5000);
               }
             } catch (err) {
               this.error = 'An unexpected error occurred.';
