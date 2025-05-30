@@ -23,7 +23,7 @@ A Node.js + Express web app that allows users to define custom price plans for c
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/price-plan-app.git
+git clone https://github.com/vincenthleko/price-plan-app.git
 cd price-plan-app
 npm install
 npm start
